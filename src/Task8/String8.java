@@ -5,18 +5,16 @@ public class String8 {
     // Найти самое длинное слово и вывести его на экран. Случай, когда самых длинных слов может быть несколько, не обрабатывать.
     public static void main(String[] args) {
         String text = "the world is beautiful when there is no war in the world";
-        char [] array = text.toCharArray();
 
-        StringBuilder max = new StringBuilder();
+        String[] str = text.split(" ");       // массив из слов разделитель котрых пробел !!!!
+        String max = "";                        // максимальное слово
 
-        int t = 0;
-        int m = 0;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < str.length; i++) {
 
-            if (array[i]!=' '){
-                t++;
-
+            if (str[i].length() >= max.length()) {
+                max = str[i];
             }
         }
+        System.out.println(max);
     }
 }
