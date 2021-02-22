@@ -11,37 +11,37 @@ public class String4 {
 
     public static String t(String str) {
         char[] array = str.toCharArray();
-        StringBuilder sb = new StringBuilder();
+        String str1 = "";
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 'т') {
-                sb.append(array[i]);
+                str1 = new String(String.valueOf(array[i]));
             }
         }
-        return sb.toString();
+        return str1;
     }
 
     public static String o(String str) {
         char[] array = str.toCharArray();
-        StringBuilder sb = new StringBuilder();
+        String str1 = "";
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 'о') {
-                sb.append(array[i]);
+                str1 = new String(String.valueOf(array[i]));
             }
         }
-        return sb.toString();
+        return str1;
     }
 
     public static String p(String str) {
         char[] array = str.toCharArray();
-        StringBuilder sb = new StringBuilder();
+        String str1 = "";
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 'р') {
-                sb.append(array[i]);
+                str1 = new String(String.valueOf(array[i]));
             }
         }
-        return sb.toString();
+        return str1;
     }
 }
