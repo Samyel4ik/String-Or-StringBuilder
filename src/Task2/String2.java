@@ -9,10 +9,8 @@ public class String2 {
         StringBuilder sss = new StringBuilder();
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] != 'a') {
-                sss.append(array[i]);
-            } else {
-                sss.append(array[i]);
+            sss.append(array[i]);
+            if (array[i] == 'a') {
                 sss.append('b');
             }
         }
