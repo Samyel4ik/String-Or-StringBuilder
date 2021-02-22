@@ -5,17 +5,12 @@ public class String10 {
     // Определить количество предложений в строке X.
     public static void main(String[] args) {
         String text = "The world is beautiful. When there is no war in the world! Java?";
-        char [] array = text.toCharArray();
+        String sing = "!?.";
+        char[] array = text.toCharArray();
 
         int t = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i]=='.'){
-                t++;
-            }
-            if (array[i]=='!'){
-                t++;
-            }
-            if (array[i]=='?'){
+            if(sing.contains(String.valueOf(array[i]))){
                 t++;
             }
         }

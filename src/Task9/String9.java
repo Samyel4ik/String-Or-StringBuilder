@@ -5,10 +5,15 @@ public class String9 {
     // Учитывать только английские буквы.
     public static void main(String[] args) {
         String text = "Java Java";
-        numberLetters(text);
+        int numberCapitalLetters = numberCapitalLetters(removeSpaces(text));             // кол больших букв
+        System.out.println("Количество больших букв:" + numberCapitalLetters);
+        String str2 = removeSpaces(text);                                               // количество букв без пробелов
+        int numberSmallLetters = removeSpaces(text).length() - numberCapitalLetters;    //количество маленьких букв
+        System.out.println("Количество маленьких букв:" + numberSmallLetters);
+
     }
 
-    public static StringBuilder removeSpaces(String str) {
+    public static String removeSpaces(String str) {         // удалили пробелы
         StringBuilder sss = new StringBuilder();
         char[] array = str.toCharArray();
 
@@ -17,23 +22,18 @@ public class String9 {
                 sss.append(array[i]);
             }
         }
-        return sss;
+        return sss.toString();
     }
 
-    public static void numberLetters(String str) {
+    public static int numberCapitalLetters(String str) {     // нашли большие буквы
         int numberCapitalLetters = 0;
-        int numberSmallLetters = 0;
-        String str1 = removeSpaces(str).toString();
-        char[] array = str1.toCharArray();
+        char[] array = str.toCharArray();
 
         for (int i = 0; i < array.length; i++) {
             if (Character.isUpperCase(array[i])) {
                 numberCapitalLetters++;
-            } else {
-                numberSmallLetters++;
             }
         }
-        System.out.println("Маленькие буквы:" + numberSmallLetters);
-        System.out.println("Большие буквы:" + numberCapitalLetters);
+        return numberCapitalLetters;
     }
 }

@@ -14,7 +14,7 @@ public class String4 {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 'т') {
-                return new String(String.valueOf(array[i]));
+                return String.valueOf(array[i]);
             }
         }
         return str;
@@ -25,7 +25,7 @@ public class String4 {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 'о') {
-                return new String(String.valueOf(array[i]));
+                return String.valueOf(array[i]);
             }
         }
         return str;
@@ -36,7 +36,7 @@ public class String4 {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 'р') {
-                return new String(String.valueOf(array[i]));
+                return String.valueOf(array[i]);
             }
         }
         return str;
