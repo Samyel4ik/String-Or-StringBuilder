@@ -6,15 +6,20 @@ public class String8 {
     public static void main(String[] args) {
         String text = "the world is beautiful when there is no war in the world";
 
-        String[] str = text.split(" ");       // массив из слов разделитель котрых пробел !!!!
-        String max = "";                        // максимальное слово
+        System.out.println(longWord(text));
 
-        for (int i = 0; i < str.length; i++) {
+    }
 
-            if (str[i].length() >= max.length()) {
-                max = str[i];
+    public static String longWord(String str) {
+        String[] str1 = str.split(" ");
+        String max = "";
+
+        for (int i = 0; i < str1.length; i++) {
+
+            if (str1[i].length() >= max.length()) {
+                max = str1[i];
             }
         }
-        System.out.println(max);
+        return max;
     }
 }
