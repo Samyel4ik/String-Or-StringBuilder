@@ -4,19 +4,36 @@ public class String9 {
     //Посчитать количество строчных (маленьких) и прописных (больших) букв в введенной строке.
     // Учитывать только английские буквы.
     public static void main(String[] args) {
-        String text = "The World is beautiful when there is no War in the world";
+        String text = "Java Java";
+        numberLetters(text);
+    }
 
-        char [] array = text.toCharArray();
-        int t = 0; // кол бол букв
-        int x = 0; // кол мал букв
+    public static StringBuilder removeSpaces(String str) {
+        StringBuilder sss = new StringBuilder();
+        char[] array = str.toCharArray();
+
         for (int i = 0; i < array.length; i++) {
-            if (Character.isUpperCase(array[i])){
-                t++;
-            }else {
-                x++;
+            if (array[i] != ' ') {
+                sss.append(array[i]);
             }
         }
-        System.out.println("Маленькие буквы:" + x);
-        System.out.println("Большие буквы:" + t);
+        return sss;
+    }
+
+    public static void numberLetters(String str) {
+        int numberCapitalLetters = 0;
+        int numberSmallLetters = 0;
+        String str1 = removeSpaces(str).toString();
+        char[] array = str1.toCharArray();
+
+        for (int i = 0; i < array.length; i++) {
+            if (Character.isUpperCase(array[i])) {
+                numberCapitalLetters++;
+            } else {
+                numberSmallLetters++;
+            }
+        }
+        System.out.println("Маленькие буквы:" + numberSmallLetters);
+        System.out.println("Большие буквы:" + numberCapitalLetters);
     }
 }
