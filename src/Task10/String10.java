@@ -6,14 +6,18 @@ public class String10 {
     public static void main(String[] args) {
         String text = "The world is beautiful. When there is no war in the world! Java?";
         String sing = "!?.";
-        char[] array = text.toCharArray();
+        System.out.println("Количество предложений:"+ numSentence(text,sing));
 
+    }
+
+    public static int numSentence(String text, String sing) {
+        char[] array = text.toCharArray();
         int t = 0;
         for (int i = 0; i < array.length; i++) {
-            if(sing.contains(String.valueOf(array[i]))){
+            if (sing.contains(String.valueOf(array[i]))) {
                 t++;
             }
         }
-        System.out.println("В строке:" + t + "предложений");
+        return t;
     }
 }
